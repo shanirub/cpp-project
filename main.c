@@ -4,21 +4,39 @@
 
 int main(void)
 {
+    #define WORD dynamikumfang // test word
+
     char guess; // last guess: a letter
     int nmiss; // number of misses = number of bad guesses
+    int nguess; // number of guesses
     int maxmiss; // max number of allowed misses, before the game is over
     bool isSolved = false; // user solved this round
     bool isEndgame = false; // the game is over (max number of misses, or round was solved)
+    char * currentWord; // the guessed word until now. unknown letter represented as "?"
+    char * guesses; // saved old guesses
 
-
-    bool isOldGuess(char guess)
+    
+    int resetValues()
     {
-        // returns true, when the user already guessed this letter
+        // resets values before a new word?
     }
 
+    /** returns true, when the user already guessed this letter **/
+    bool isOldGuess(char guess)
+    {
+        if (strchr(guesses, guess)==NULL)
+            return false;
+        else
+            return true;   
+    }
+
+    /** returns true, when the guessed letter is in the word **/
     bool isInWord(char guess) 
     {
-        // returns true, when the guessed letter is in the word
+        if (strchr(WORD, guess)==NULL)
+            return false;
+        else
+            return true;
     }
 
     int updateWord(char * currentWord)
