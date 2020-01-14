@@ -1,35 +1,17 @@
 # cpp-project
 a project for c/c++ course.
 
-***idea for an algorithm:***
+An implementation of a simple Hangman game, written in c.
 
-**vars**
-guess: letter every turn
-miss: number of misses
-max-misses: max allowed misses
-isOldGuess: function
-isInWord: function
-isSolved: bool
-isEndGame: bool
+## Gameplay ##
+Each round presents the player a new word to solve. Each letter would be represented as a "-".
+The player guesses letters each turn.
 
-start loop (while loop)
+If the word contains the guessed letter, the view will be updated accordingly - the letter will replace the "-".
+If the word doesn't contain the guessed letter, it would count as a miss. The hangman picture will be updated accordingly. A max. number of misses is allowed.
 
-if already guessed
-    message
-    ignore
-else
-    if guess in word
-        message
-        show guess
-        if solved
-            message
-            end game
-    else
-        message
-        miss++
-        if miss > max-misses
-            message
-            end game
-        update hangman
+The game ends in two ways:
+1. The user guessed the word. (Win)
+2. The user used all his allowed guesses. (Loss)
 
-end loop
+After the game ends, the user can choose if he wants to play another round (with a new word).
