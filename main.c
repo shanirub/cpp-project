@@ -5,6 +5,7 @@
 int main(void)
 {
     #define WORD dynamikumfang // test word
+    #define MAX_MISSES 10
 
     char guess; // last guess: a letter
     int nmiss; // number of misses = number of bad guesses
@@ -16,9 +17,23 @@ int main(void)
     char * guesses; // saved old guesses
 
     
+    char readGuess(void)
+    {
+        char guess;
+        printf("What is your next guess?\n");
+        guess = getc();
+        return guess;
+    }
+
     int resetValues()
     {
         // resets values before a new word?
+        nmiss = 0;
+        nguess = 0;
+        maxmiss = MAX_MISSES;
+        isSolved = false;
+        isEndgame = false;
+        currentWord = (char)malloc(sizeof(char)*20);
     }
 
     /** returns true, when the user already guessed this letter **/
