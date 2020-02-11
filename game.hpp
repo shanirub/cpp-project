@@ -26,4 +26,4 @@ class game
         ~game();
         void startgame();
 
-}
+};
