@@ -12,7 +12,9 @@ int main()
     // a loop as long as the game didn't end
     while (!g.issolved() && !g.ismaxguess())
     {
-        // read guess - lower case? is valid?
+        // read guess
+        // isvalid?
+        // when valid --> lowercase -- ctype.h, tolower()
         // guess old?
         // guess in word?
     }

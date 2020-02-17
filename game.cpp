@@ -12,6 +12,11 @@ game::game(string wordtoguess)
     wordtoguess = string(wordtoguess);
     nguess = 0;
     nmiss = 0;
-    wordsofar = string(wordtoguess.length(), '-');
+    wordsofar = string(wordtoguess.length(), '-');//fill constructor
     oldguess = string();
+}
+
+game::~game()
+{
+    // delete stuff from memory
 }
