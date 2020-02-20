@@ -20,3 +20,35 @@ game::~game()
 {
     // delete stuff from memory
 }
+
+bool game::isguessinword(char guess) {
+    
+}
+
+bool game::isnewguess(char guess) {
+    
+}
+
+char game::readguess() {
+    
+}
+
+bool game::isvalidguess(char guess) {
+    
+}
+
+void game::correctguess(char guess) {
+    
+}
+
+void game::wrongguess(char guess) {
+    
+}
+
+void game::gamewon() {
+    
+}
+
+void game::gamelost() {
+    
+}

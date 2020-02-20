@@ -13,10 +13,34 @@ int main()
     while (!g.issolved() && !g.ismaxguess())
     {
         // read guess
+        guess = g.readguess();
+
         // isvalid?
-        // when valid --> lowercase -- ctype.h, tolower()
+        if (g.isvalidguess(guess))
+        {
+            cout << " Invalid guess. Please try again.";
+            continue;
+        } else {
+            (guess < 97) ? guess+=22 : guess ;
+        }
+        
         // guess old?
+        if (!g.isnewguess(guess))
+        {
+            cout << " Old guess. Please try again.";
+            continue;
+            /* TODO  modify flowchart. flow back to readguess missing */
+        }
+        
         // guess in word?
+        if (g.isguessinword(guess))
+        {
+            // correct guess
+        } else
+        {
+            // wrong guess
+        }
+        
     }
 
     // game ended: but how?
@@ -24,10 +48,12 @@ int main()
     {
         // you solved in (misses/guesses)
         // the word was
+        g.gamewon();
     } else
     {
         // you lost in (misses/guesses)
         // the word was
+        g.gamelost();
     }
     
 }

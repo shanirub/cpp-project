@@ -21,11 +21,15 @@ class game
         game(string wordtosolve); // constructor with a word to solve
         ~game(); // deconstructor - what should it do???
   
-        bool isguessinword(char guess, char * wordtosolve); // returns true if the guess is correct
+        bool isguessinword(char guess); // returns true if the guess is correct
         bool isnewguess(char guess); // returns true if the guess was not guessed before (according to oldguess)
         bool issolved(); // returns true when the entire word was guessed. game ends - win
         bool ismaxguess(); // returns true when max. number of misses was reached. game ends - loss
         char readguess(); // reads the guess, and returns it
         bool isvalidguess(char guess); // returns true if the guess is a letter (upper or lower case)
+        void correctguess(char guess); // updates wordsofar, oldguess, nguess
+        void wrongguess(char guess); // updates oldguess, nguess, nmiss
+        void gamewon();
+        void gamelost();
 
 };
