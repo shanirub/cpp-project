@@ -29,7 +29,7 @@ class game
         bool isvalidguess(char guess); // returns true if the guess is a letter (upper or lower case)
         void correctguess(char guess); // updates wordsofar, oldguess, nguess
         void wrongguess(char guess); // updates oldguess, nguess, nmiss
-        void gamewon();
-        void gamelost();
+        void gamewon(); // what happens when a game is lost
+        void gamelost(); // what happens when a game is won
 
 };

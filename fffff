@@ -1,0 +1,18 @@
+[1mdiff --git a/.vscode/c_cpp_properties.json b/.vscode/c_cpp_properties.json[m
+[1mindex 91318b7..53d1ef5 100644[m
+[1m--- a/.vscode/c_cpp_properties.json[m
+[1m+++ b/.vscode/c_cpp_properties.json[m
+[36m@@ -3,10 +3,11 @@[m
+         {[m
+             "name": "Linux",[m
+             "includePath": [[m
+[31m-                "${workspaceFolder}/**"[m
+[32m+[m[32m                "${workspaceFolder}/**",[m
+[32m+[m[32m                "/usr/include/**"[m
+             ],[m
+             "defines": [],[m
+[31m-            "compilerPath": "/usr/lib64/ccache/gcc",[m
+[32m+[m[32m            "compilerPath": "/usr/bin/g++",[m
+             "cStandard": "c11",[m
+             "cppStandard": "c++17",[m
+             "intelliSenseMode": "gcc-x64"[m
