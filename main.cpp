@@ -21,7 +21,7 @@ int main()
             cout << " Invalid guess. Please try again.";
             continue;
         } else {
-            (guess < 97) ? guess+=22 : guess ;
+            (guess < 97) ? guess+=22 : guess ; // upper case -> lower case
         }
         
         // guess old?
@@ -36,9 +36,11 @@ int main()
         if (g.isguessinword(guess))
         {
             // correct guess
+            g.correctguess;
         } else
         {
             // wrong guess
+            g.wrongguess;
         }
         
     }

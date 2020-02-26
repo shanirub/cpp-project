@@ -49,8 +49,10 @@ void game::correctguess(char guess) {
     // TODO handle multiple occurences of the letter!
     nguess++;
     oldguess += (guess);
-    int i = wordtoguess.find(guess); // index for the letter
-    wordsofar[i] = guess;
+    for (int i = 0; i < wordtoguess.length(); i++) {
+        if (wordtoguess[i] == guess)
+            wordsofar[i] = guess;
+    }
 }
 
 void game::wrongguess(char guess) {
@@ -67,5 +69,5 @@ void game::gamewon() {
 void game::gamelost() {
     cout << " Oh no. You've reached the maximum number of allowed misses. That means you lost." << endl;
     cout << " The word was: " << wordtoguess << endl;
-    cout << " You guessed " << nguess << " guesses."; << endl;
+    cout << " You guessed " << nguess << " guesses." << endl;
 }
