@@ -36,11 +36,11 @@ int main()
         if (g.isguessinword(guess))
         {
             // correct guess
-            g.correctguess;
+            g.correctguess(guess);
         } else
         {
             // wrong guess
-            g.wrongguess;
+            g.wrongguess(guess);
         }
         
     }

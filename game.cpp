@@ -71,3 +71,11 @@ void game::gamelost() {
     cout << " The word was: " << wordtoguess << endl;
     cout << " You guessed " << nguess << " guesses." << endl;
 }
+
+bool game::issolved() {
+    return (wordsofar.compare(wordtoguess) == 0);
+}
+
+bool game::ismaxguess() {
+    return nmiss == MAX_NMISS;
+}
