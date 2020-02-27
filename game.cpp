@@ -9,12 +9,12 @@ game::game()
     game("default");
 }
 
-game::game(string wordtoguess)
+game::game(string word)
 {
-    wordtoguess = string(wordtoguess);
+    wordtoguess = string(word);
     nguess = 0;
     nmiss = 0;
-    wordsofar = string(wordtoguess.length(), '-');//fill constructor
+    wordsofar = string(word.length(), '-');//fill constructor
     oldguess = string();
 }
 
@@ -46,7 +46,6 @@ bool game::isvalidguess(char guess) {
 }
 
 void game::correctguess(char guess) {
-    // TODO handle multiple occurences of the letter!
     nguess++;
     oldguess += (guess);
     for (int i = 0; i < wordtoguess.length(); i++) {
@@ -62,7 +61,7 @@ void game::wrongguess(char guess) {
 }
 
 void game::gamewon() {
-    cout << " Congratulations! You guessed the word." << endl;
+    cout << " Congratulations! You guessed the word:" << wordtoguess << endl;
     cout << " It took you " << nguess << " guesses, " << nmiss << " from them were misses." << endl;
 }
 

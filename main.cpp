@@ -16,12 +16,13 @@ int main()
         guess = g.readguess();
 
         // isvalid?
-        if (g.isvalidguess(guess))
+        if (!g.isvalidguess(guess))
         {
             cout << " Invalid guess. Please try again.";
             continue;
         } else {
-            (guess < 97) ? guess+=22 : guess ; // upper case -> lower case
+            if (guess < 97)
+                guess=+32; // upper case -> lower case
         }
         
         // guess old?
@@ -57,5 +58,7 @@ int main()
         // the word was
         g.gamelost();
     }
+
+    // delete g;
     
 }
