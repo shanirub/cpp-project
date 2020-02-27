@@ -2,6 +2,13 @@
 #include<iostream>
 #include<string>
 
+const std::string red("\033[0;31m");
+const std::string green("\033[1;32m");
+const std::string yellow("\033[1;33m");
+const std::string cyan("\033[0;36m");
+const std::string magenta("\033[0;35m");
+const std::string reset("\033[0m");
+
 using namespace std;
 
 game::game()
@@ -33,7 +40,7 @@ bool game::isnewguess(char guess) {
 
 char game::readguess() {
     char guess;
-    cout << " Word left to guess:" << endl << wordsofar << endl;
+    cout << reset << " Word left to guess:" << endl << yellow << wordsofar << reset << endl;
     cout << " Number of misses: " << nmiss << " from max. " << MAX_NMISS << " allowed misses. " << endl;
     cout << " Letters that were already guessed: " << oldguess << endl;
     cout << " Please enter you next guess (must be a letter): ";
@@ -61,12 +68,12 @@ void game::wrongguess(char guess) {
 }
 
 void game::gamewon() {
-    cout << " Congratulations! You guessed the word:" << wordtoguess << endl;
+    cout << green << " Congratulations! You guessed the word:" << wordtoguess << endl;
     cout << " It took you " << nguess << " guesses, " << nmiss << " from them were misses." << endl;
 }
 
 void game::gamelost() {
-    cout << " Oh no. You've reached the maximum number of allowed misses. That means you lost." << endl;
+    cout << red << " Oh no. You've reached the maximum number of allowed misses. That means you lost." << endl;
     cout << " The word was: " << wordtoguess << endl;
     cout << " You guessed " << nguess << " guesses." << endl;
 }

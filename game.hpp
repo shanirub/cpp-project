@@ -6,7 +6,7 @@ class game
 {
     private:
         int MAX_NMISS = 10; // max. number of misses allowed
-        string VALID_GUESS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; // a string containing the allowed guesses (all the letter)
+        string VALID_GUESS = "abcdefghijklmnopqrstuvwxyz"; // a string containing the allowed guesses (all the letter)
         int nguess; // number of guesses made so far
         int nmiss; // number of misses so far
         string wordtoguess; // the original word
